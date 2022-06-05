@@ -8,7 +8,14 @@ const dates = [
 ];
 
 // TODO: Buatlah fungsi createDate
-const createDate = null;
+const createDate = (dates, i) => {
+  const dateParsed = []
+  dates.forEach(date => {
+    dateParsed.push((Date.parse(date)/1000).toString())
+  })
+  
+  return (typeof(i) == 'number') ? dateParsed[i] : dateParsed.sort().join("-")
+};
 
 // ! JANGAN DIMODIFIKASI
 (() => {
